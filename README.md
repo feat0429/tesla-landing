@@ -2,11 +2,12 @@ Tesla landing page clone made with a learning purpose. The original page can cha
 
 The application was build with Astro, Tailwind CSS and vanilla JavaScript.
 
-💻Run the following scripts to run the appplication:
-1-cd ./reading-list
+### 💻Run the following scripts to run the appplication:
 
-2-npm install (only if it has not been done before)
+    1-cd ./reading-list
 
-3-npm run dev
+    2-npm install (only if it has not been done before)
 
-4-Open the link displayed on the terminal (http://localhost:4321/). The port can change so it can be different from 4321. 
+    3-npm run dev
+
+    4-Open the link displayed on the terminal (http://localhost:4321/). The port can change so it can be different from 4321. 
