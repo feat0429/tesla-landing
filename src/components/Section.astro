@@ -21,7 +21,7 @@ const shadowVariants = {
 			relative overflow-hidden"
     data-header-color={colorVariants[color]}
 >
-    <div class="z-30 relative h-full flex flex-col">
+    <div class="animated-content z-30 relative h-full flex flex-col">
         <header class="mt-10">
             <h1
                 class={`${textColorVariants[color]} text-[40px] font-semibold py-0 px-6`}
@@ -62,3 +62,30 @@ const shadowVariants = {
         <slot name="background" />
     </div>
 </section>
+
+<script>
+    const animatedElements = document.querySelectorAll(".animated-content");
+
+    const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.25,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const { isIntersecting } = entry;
+            console.log(entry.target.innerHTML, isIntersecting);
+
+            if (isIntersecting) {
+                entry.target.classList.add("animate-fadeIn");
+            } else {
+                entry.target.classList.remove("animate-fadeIn");
+            }
+        });
+    }, observerOptions);
+
+    animatedElements.forEach((element) => {
+        observer.observe(element);
+    });
+</script>
