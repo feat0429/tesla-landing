@@ -19,7 +19,7 @@ export default {
 				lightHover: 'white 0px 2px 0px 0px',
 			},
 			animation:{
-				fadeIn: ' 0.5s ease-in-out fadeIn'
+				fadeIn: ' 0.3s ease-in-out fadeIn'
 			},
 			keyframes:{
 				fadeIn:{
