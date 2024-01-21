@@ -1,0 +1,22 @@
+---
+const { color, text, details } = Astro.props;
+const textColorVariants = {
+    dark: "text-blackRussian",
+    light: "text-white",
+};
+
+const shadowVariants = {
+    dark: "shadow-dark hover:shadow-darkHover",
+    light: "shadow-light hover:shadow-lightHover",
+};
+---
+
+<p class=`text-xs font-normal max-w-prose ${textColorVariants[color]}`>
+    {text}
+    <a
+        href=""
+        class={`${shadowVariants[color]} duration-300 transition-shadow`}
+    >
+        {details}</a
+    >
+</p>

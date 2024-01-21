@@ -1,0 +1,31 @@
+---
+import Section from "./Section.astro";
+import DoubleButton from "./DoubleButton.astro";
+import Disclaimer from "./Disclaimer.astro";
+---
+
+<Section
+    title="Model X"
+    price="From $68,590*"
+    priceDetails="After Federal Tax Credit & Est. Gas Savings"
+    color="dark"
+>
+    <div slot="footer">
+        <DoubleButton
+            leftButtonText="Custom Order"
+            leftButtonColor="light"
+            rightButtonText="Demo Drive"
+            rightButtonColor="dark"
+        />
+        <Disclaimer
+            text="*Price before incentives and savings is $79,990, excluding taxes and fees. Subject to change."
+            details="Learn about est. gas savings."
+            color="light"
+        />
+    </div>
+    <img
+        slot="background"
+        class="object-center object-cover h-full w-full"
+        src="/images/Homepage-Model-X.avif"
+    />
+</Section>

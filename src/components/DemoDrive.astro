@@ -1,0 +1,21 @@
+---
+import DemoButton from "./DemoButton.astro";
+import Section from "./Section.astro";
+---
+
+<Section
+    title="Experience Tesla"
+    subtitle="Schedule a Demo Drive Today"
+    color="light"
+>
+    <div slot="footer">
+        <DemoButton />
+    </div>
+    <video
+        slot="background"
+        class="object-center object-cover h-full w-full"
+        src="/videos/Homepage-Demo-Drive.webm"
+        autoplay
+        muted
+        loop></video>
+</Section>

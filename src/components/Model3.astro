@@ -1,0 +1,27 @@
+---
+import Section from "./Section.astro";
+import DoubleButton from "./DoubleButton.astro";
+import Disclaimer from "./Disclaimer.astro";
+---
+
+<Section title="Model 3" price="Lease starting at $329/mo*" color="dark">
+    <div slot="footer">
+        <DoubleButton
+            leftButtonText="Custom Order"
+            leftButtonColor="light"
+            rightButtonText="Learn More"
+            rightButtonColor="dark"
+        />
+        <Disclaimer
+            text="*Excludes taxes and fees with price subject to change. Available in select states."
+            details="See Details"
+            color="dark"
+        />
+    </div>
+    <img
+        slot="background"
+        class="object-center object-cover h-full w-full"
+        src="/images/Homepage-Model-3.avif"
+        alt="Model 3"
+    />
+</Section>

@@ -1,0 +1,24 @@
+---
+import Section from "./Section.astro";
+import DoubleButton from "./DoubleButton.astro";
+---
+
+<Section
+    title="Solar Roof"
+    subtitle="Produce Clean Energy From Your Roof"
+    color="dark"
+>
+    <div slot="footer">
+        <DoubleButton
+            leftButtonText="Order Now"
+            leftButtonColor="light"
+            rightButtonText="Learn More"
+            rightButtonColor="dark"
+        />
+    </div>
+    <img
+        slot="background"
+        class="object-center object-cover h-full w-full"
+        src="/images/Homepage-SolarRoof.avif"
+    />
+</Section>

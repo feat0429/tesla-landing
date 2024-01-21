@@ -1,0 +1,17 @@
+---
+import Section from "./Section.astro";
+import SingleButton from "./SingleButton.astro";
+---
+
+<Section title="Accessories" color="dark">
+    <div slot="footer">
+        <section class="flex gap-6 text-sm py-4 px-6 mb-8">
+            <SingleButton buttonText="Shop Now" buttonColor="light" />
+        </section>
+    </div>
+    <img
+        slot="background"
+        class="object-center object-cover h-full w-full"
+        src="/images/Homepage-Accessories.avif"
+    />
+</Section>

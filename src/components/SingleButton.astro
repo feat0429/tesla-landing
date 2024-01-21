@@ -1,0 +1,16 @@
+---
+const { buttonText, buttonColor } = Astro.props;
+
+const buttonColorVariants = {
+    dark: "text-white bg-blackRussian/65",
+    light: "text-vulcan bg-whiteSmoke/80",
+};
+---
+
+<a
+    href="#"
+    class={`${buttonColorVariants[buttonColor]}
+    px-[27px] py-3 w-[264px] h-10 rounded`}
+>
+    {buttonText}
+</a>

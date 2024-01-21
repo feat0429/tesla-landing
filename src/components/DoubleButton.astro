@@ -1,0 +1,10 @@
+---
+import SingleButton from "./SingleButton.astro";
+const { leftButtonText, leftButtonColor, rightButtonText, rightButtonColor } =
+    Astro.props;
+---
+
+<section class="flex gap-6 text-sm py-4 px-6 mb-8">
+    <SingleButton buttonText={leftButtonText} buttonColor={leftButtonColor} />
+    <SingleButton buttonText={rightButtonText} buttonColor={rightButtonColor} />
+</section>

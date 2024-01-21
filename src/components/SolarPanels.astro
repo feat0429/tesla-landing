@@ -1,0 +1,24 @@
+---
+import Section from "./Section.astro";
+import DoubleButton from "./DoubleButton.astro";
+---
+
+<Section
+    title="Solar Panels"
+    linkText="Schedule a Virtual Consultation"
+    color="light"
+>
+    <div slot="footer">
+        <DoubleButton
+            leftButtonText="Order Now"
+            leftButtonColor="light"
+            rightButtonText="Learn More"
+            rightButtonColor="dark"
+        />
+    </div>
+    <img
+        slot="background"
+        class="object-center object-cover h-full w-full"
+        src="/images/Homepage-SolarPanels.avif"
+    />
+</Section>

@@ -1,0 +1,31 @@
+---
+import Section from "./Section.astro";
+import DoubleButton from "./DoubleButton.astro";
+import Disclaimer from "./Disclaimer.astro";
+---
+
+<Section
+    title="Model S"
+    price="From $71,090*"
+    priceDetails="After Est. Gas Savings"
+    color="dark"
+>
+    <div slot="footer">
+        <DoubleButton
+            leftButtonText="Custom Order"
+            leftButtonColor="light"
+            rightButtonText="Demo Drive"
+            rightButtonColor="dark"
+        />
+        <Disclaimer
+            text="*Price before savings is $74,990, excluding taxes and fees. Subject to change."
+            details="Learn about est. gas savings."
+            color="dark"
+        />
+    </div>
+    <img
+        slot="background"
+        class="object-center object-cover h-full w-full"
+        src="/images/Homepage-Model-S.avif"
+    />
+</Section>

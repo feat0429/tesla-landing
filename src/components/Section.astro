@@ -1,0 +1,64 @@
+---
+const { color, title, subtitle, price, priceDetails, linkText } = Astro.props;
+const colorVariants = {
+    dark: "#171a20",
+    light: "white",
+};
+
+const textColorVariants = {
+    dark: "text-blackRussian",
+    light: "text-white",
+};
+
+const shadowVariants = {
+    dark: "shadow-dark hover:shadow-darkHover",
+    light: "shadow-light hover:shadow-lightHover",
+};
+---
+
+<section
+    class="landing-section h-[calc(100vh-72px)] w-full text-center
+			relative overflow-hidden"
+    data-header-color={colorVariants[color]}
+>
+    <div class="z-30 relative h-full flex flex-col">
+        <header class="mt-10">
+            <h1
+                class={`${textColorVariants[color]} text-[40px] font-semibold py-0 px-6`}
+            >
+                {title}
+            </h1>
+            <p class="pt-[6px] px-6 pb-[14px]">
+                <span class={`text-sm font-normal ${textColorVariants[color]}`}>
+                    {subtitle}
+                    <a
+                        class={`${shadowVariants[color]} duration-300 transition-shadow`}
+                        href="#"
+                    >
+                        {linkText}
+                    </a>
+                </span>
+
+                <strong
+                    class={`${textColorVariants[color]} text-xl font-normal`}
+                    >{price}
+                </strong>
+                <small
+                    class={`block ${textColorVariants[color]} font-normal text-xs`}
+                >
+                    {priceDetails}
+                </small>
+            </p>
+        </header>
+
+        <footer
+            class="flex flex-col flex-grow justify-end items-center mb-4 z-30"
+        >
+            <slot name="footer" />
+        </footer>
+    </div>
+
+    <div class="absolute top-0 bottom-0 z-10 h-full w-full">
+        <slot name="background" />
+    </div>
+</section>
